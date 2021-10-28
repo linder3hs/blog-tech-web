@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { TextField, Button } from "@mui/material";
 
 const Contact = () => {
   // * Teniendo un solo state para todos mis inputs
@@ -14,10 +15,11 @@ const Contact = () => {
   const handleInputChange = (e) => {
     // aca recibo el evento el cual contiene el name y el value
     // el name es un atributo del input
-    const name = e.target.name;
+    const { name, value } = e.target;
+
     setInputs({
       ...inputs,
-      [name]: e.target.value,
+      [name]: value,
     });
   };
 
@@ -33,27 +35,27 @@ const Contact = () => {
       <h1>Contacto</h1>
       <form action="">
         <p>
-          <label htmlFor="name">Nombre</label>
-          <input
+          <TextField
             type="text"
             name="name"
+            label="Nombre"
             value={inputs.name}
             onChange={handleInputChange}
           />
         </p>
         <p>
-          <label htmlFor="email">Email</label>
-          <input
+          <TextField
             type="text"
+            label="Email"
             name="email"
             value={inputs.email}
             onChange={handleInputChange}
           />
         </p>
         <p>
-          <button onClick={handleSubmit} type="submit">
+          <Button onClick={handleSubmit} variant="contained" type="submit">
             Enviar
-          </button>
+          </Button>
         </p>
       </form>
     </div>
