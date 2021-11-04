@@ -1,6 +1,4 @@
-// import "./App.css";
-// import Home from "./views/Home";
-import Contact from "./views/Contact";
+import { LoginView, ContactView } from "./views";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 
@@ -9,7 +7,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <div className="App">
         {/* <Home /> */}
-        <Contact />
+        <LoginView />
       </div>
     </ThemeProvider>
   );
