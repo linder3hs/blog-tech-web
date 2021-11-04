@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { TextField, Button } from "@mui/material";
+import { Button, Container, TextField } from "@mui/material";
+import Drawer from "../../components/Drawer";
 
 const Contact = () => {
   // * Teniendo un solo state para todos mis inputs
@@ -32,32 +33,13 @@ const Contact = () => {
 
   return (
     <div>
-      <h1>Contacto</h1>
-      <form action="">
-        <p>
-          <TextField
-            type="text"
-            name="name"
-            label="Nombre"
-            value={inputs.name}
-            onChange={handleInputChange}
-          />
-        </p>
-        <p>
-          <TextField
-            type="text"
-            label="Email"
-            name="email"
-            value={inputs.email}
-            onChange={handleInputChange}
-          />
-        </p>
-        <p>
-          <Button onClick={handleSubmit} variant="contained" type="submit">
-            Enviar
-          </Button>
-        </p>
-      </form>
+      <Drawer>
+        <Container maxWidth="lg">
+          <div>
+            <h1>Hola</h1>
+          </div>
+        </Container>
+      </Drawer>
     </div>
   );
 };
