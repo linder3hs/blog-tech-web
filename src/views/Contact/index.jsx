@@ -33,13 +33,11 @@ const Contact = () => {
 
   return (
     <>
-      <Drawer>
-        <Container maxWidth="xl">
-          <div>
-            <h1>Hola</h1>
-          </div>
-        </Container>
-      </Drawer>
+      <Container maxWidth="xl">
+        <div>
+          <h1>Hola</h1>
+        </div>
+      </Container>
     </>
   );
 };
