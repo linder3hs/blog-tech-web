@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Outlet } from "react-router-dom";
 import { styled, useTheme } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 import {
@@ -147,7 +148,9 @@ const MiniDrawer = (props) => {
         <DrawerHeader />
         {/* BODY */}
         {/* Puede ser un objeto visual */}
-        {props.children}
+        {/* Children se encargaba de renderizar a todas las vistas hijas quel pasabamos */}
+        {/* {props.children} */}
+        <Outlet />
       </Box>
     </Box>
   );

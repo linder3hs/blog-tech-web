@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Container, TextField } from "@mui/material";
-import Drawer from "../../components/Drawer";
+import Drawer from "../../layout/Drawer";
 
 const Contact = () => {
   // * Teniendo un solo state para todos mis inputs

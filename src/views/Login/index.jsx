@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button, Container, Grid, TextField } from "@mui/material";
+//  * imporatar nuestra funcion login desde service
+import { login } from "../../services/auth";
 
 const Login = () => {
   const [inputs, setInputs] = useState({
@@ -15,7 +17,10 @@ const Login = () => {
     }));
   };
 
-  const handleSubmit = (e) => console.log(inputs);
+  const handleSubmit = async () => {
+    const response = await login(inputs);
+    console.log(response);
+  };
 
   return (
     <Container maxWidth="xl">
