@@ -23,7 +23,7 @@ const Home = () => {
         {users &&
           users.map((user) => (
             <Grid item xs={12} sm={6}>
-              <HistoryCard />
+              <HistoryCard user={user} />
             </Grid>
           ))}
       </Grid>
