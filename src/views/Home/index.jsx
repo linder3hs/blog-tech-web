@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <Container maxWidth="xl">
       <Grid container spacing={3}>
-        <h1>Hello, Vercel my first change with CI</h1>
+        <h1>Hello, Vercel my first change with CI - DEV</h1>
         {users &&
           users.map((user) => (
             <Grid item xs={12} sm={6}>
